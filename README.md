@@ -1,12 +1,12 @@
 # project_my_health_care_app
--- Create the "healthcare" database
+
 CREATE DATABASE healthcare;
 
--- Use the "healthcare" database
+
 USE healthcare;
 
 
--- Create the "User" table for user authentication
+
 CREATE TABLE User (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
@@ -14,13 +14,13 @@ CREATE TABLE User (
     role VARCHAR(20) NOT NULL
 );
 
--- Insert sample data into the "User" table
+
 INSERT INTO User (username, password, role) VALUES
 ('Adi', 'adi@123', 'admin'),
 ('Rahul', 'ra@123', 'patient'),
 ('Siddhant', 'sid@123', 'patient');
 
--- Create the "Patient" table for patient information
+
 CREATE TABLE Patient (
     patientid INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -34,7 +34,7 @@ INSERT INTO Patient (patientid, name, phoneno,age,gender) VALUES
 (12,'Siddhant',786,14,'M'),
 (13,'soni',127,20,'F');
 
--- Create the "Appointment" table for appointments
+
 CREATE TABLE Appointment (
     id INT AUTO_INCREMENT PRIMARY KEY,
     appointmentdate DATETIME NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Appointment (
     testResult INT
 );
 
--- Create the "TestResult" table for test results
+
 CREATE TABLE TestResult (
     id INT AUTO_INCREMENT PRIMARY KEY,
     testreading VARCHAR(255) NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE TestResult (
     appointment INT NOT NULL
 );
 
--- Create the "DiagnosticTest" table for diagnostic tests
+
 CREATE TABLE DiagnosticTest (
     id INT AUTO_INCREMENT PRIMARY KEY,
     testname VARCHAR(255) NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE DiagnosticTest (
     diagnosticCenter INT NOT NULL
 );
 
--- Create the "DiagnosticCenter" table for diagnostic centers
+
 CREATE TABLE DiagnosticCenter (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
